@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	data-layout-decorate="~{layout/defaultLayout}">
+	
+	<th:block layout:fragment="script">
+		<script src="/webjars/ScrollMagic/2.0.5/minified/ScrollMagic.min.js"></script>
+		<script src="/webjars/progressbar.js/1.0.1/dist/progressbar.js"></script>
+		<script type="text/javascript" src="/js/skills.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				/* tab menu */
+				$("#tab-index-btn").addClass("active");
+		    });
+			(function( $ ) {
+			    "use strict";
+			    $(function() {
+			        function animated_contents() {
+			            $(".zt-skill-bar > div ").each(function (i) {
+			                var $this  = $(this),
+			                    skills = $this.data('width');
+
+			                $this.css({'width' : skills + '%'});
+			                $this.find('span').text(skills + ' %');
+			            });
+			        }
+			        
+			        if(jQuery().appear) {
+			            $('.zt-skill-bar').appear().on('appear', function() {
+			                animated_contents();
+			            });
+			        } else {
+			            animated_contents();
+			        }
+			    });
+			}(jQuery));
+		</script>
+	</th:block>
+	
+	<th:block layout:fragment="content">
+		<!--간단한 자기소개-->
+		<div class="box-1">
+			<div class="self-introduction">
+				<h2 class="box-title">
+					간단한 자기소개
+					<a class="download-but" href="/download/file/c.jpg"><i class="material-icons">get_app</i></a>
+				</h2>
+				
+				<p class="text-content">
+					안녕하세요. 3년차 디자이너에서
+					신입 개발자가 된 이유림입니다.
+					계속해서 다양한 언어와 환경을 접할 수 있는
+					개발자의 세계에 흥미를 느끼게 되어
+					이직을 결심하게 되었습니다.
+					안녕하세요. 3년차 디자이너에서
+					신입 개발자가 된 이유림입니다.
+					<span class="point-text-black">계속해서 다양한 언어와 환경을 접할 수 있는</span>
+					<span class="point-text-color">개발자의 세계에 흥미를 느끼게 되어</span>
+					이직을 결심하게 되었습니다.
+					안녕하세요. 3년차 디자이너에서
+					신입 개발자가 된 이유림입니다.
+					계속해서 다양한 언어와 환경을 접할 수 있는
+					개발자의 세계에 흥미를 느끼게 되어
+					이직을 결심하게 되었습니다.
+					안녕하세요. 3년차 디자이너에서
+					신입 개발자가 된 이유림입니다.
+					계속해서 다양한 언어와 환경을 접할
+				</p>
+			</div>
+		</div>
+		<!--능력치-->
+		<div class="box-2">
+			<h2 class="box-title">친밀도</h2>
+			<th:block th:if="${browser.contains('Chrome')}">
+				<div class="skill-bar-box">
+					<h4>JAVA</h4>
+					<div id="skill_1_pbar" data-name="skill_1_pbar" class="skill_bars" data-perc="0.30" data-color-start="#981d37" data-color-end="#dc1d37"></div>
+				</div>
+				<div class="skill-bar-box">
+					<h4>JQUERY / JAVASCRIPT</h4>
+					<div id="skill_2_pbar" data-name="skill_2_pbar" class="skill_bars" data-perc="0.22" data-color-start="#981d37" data-color-end="#dc1d37"></div>
+				</div>
+				<div class="skill-bar-box">
+					<h4>HTML/CSS</h4>
+					<div id="skill_3_pbar" data-name="skill_3_pbar" class="skill_bars" data-perc="0.78" data-color-start="#981d37" data-color-end="#dc1d37"></div>
+				</div>
+				<div class="skill-bar-box2 top">
+					<h4>Illust</h4>
+					<div id="skill_4_pbar" data-name="skill_4_pbar" class="skill_bars" data-perc="0.99" data-color-start="#999" data-color-end="#999"></div>
+				</div>
+				<div class="skill-bar-box2">
+					<h4>Photoshop</h4>
+					<div id="skill_5_pbar" data-name="skill_5_pbar" class="skill_bars" data-perc="0.99" data-color-start="#999" data-color-end="#999"></div>
+				</div>
+				<div class="skill-bar-box2">
+					<h4>InDesign</h4>
+					<div id="skill_6_pbar" data-name="skill_6_pbar" class="skill_bars" data-perc="0.99" data-color-start="#999" data-color-end="#999"></div>
+				</div>
+			</th:block>
+			<th:block th:if="${browser.contains('Trident') || browser.contains('MSIE')}">
+				<div class="zt-skill-bar-box">
+					<h4>JAVA</h4>
+					<div class="zt-skill-bar"><div data-width="88" style="">.<span></span></div></div>
+					<h4>JQUERY / JAVASCRIPT</h4>
+					<div class="zt-skill-bar"><div data-width="55" style="">.<span></span></div></div>
+					<h4>HTML/CSS</h4>
+					<div class="zt-skill-bar"><div data-width="22" style="">.<span></span></div></div>
+					<h4 class="low">Illust</h4>
+					<div class="zt-skill-bar low"><div data-width="88" style="">.<span></span></div></div>
+					<h4 class="low">Photoshop</h4>
+					<div class="zt-skill-bar low"><div data-width="88" style="">.<span></span></div></div>
+					<h4 class="low">InDesign</h4>
+					<div class="zt-skill-bar low"><div data-width="88" style="">.<span></span></div></div>
+				</div>
+			</th:block>
+		</div>
+		<!--학력사항-->
+		<div class="box-3">
+			<h2 class="box-title">
+				학력사항
+				<a class="download-but" href="/download/file/이름_전화번호_이력서.pdf"><i class="material-icons">get_app</i></a>
+			</h2>
+			<table class="box-table">
+				<tr>
+					<th>2014.02 - 2016.02</th>
+					<td>어느대학교 졸업</td>
+				</tr>
+				<tr>
+					<th>2014.02 - 2016.02</th>
+					<td>어느 학원 수강완료</td>
+				</tr>
+			</table>
+		</div>
+		<!--경력사항-->
+		<div class="box-4">
+			<h2 class="box-title">경력사항</h2>
+			<table class="box-table">
+				<tr>
+					<th>2014.02 - 2016.02</th>
+					<td>어느회사</td>
+				</tr>
+			</table>
+		</div>
+		<!--자격정보-->
+		<div class="box-5">
+			<h2 class="box-title">자격정보</h2>
+			<table class="box-table">
+				<tr>
+					<th>2014.02 - 2016.02</th>
+					<td>관련자격증</td>
+				</tr>
+				<tr>
+					<th>2014.02 - 2016.02</th>
+					<td>나는없다</td>
+				</tr>
+			</table>
+		</div>
+	</th:block>
+</body>
+</html>

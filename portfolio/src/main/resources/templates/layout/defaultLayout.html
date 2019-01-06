@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!-- head config -->
+<head th:replace="layout/config :: configFragment"></head>
+
+<!-- 모든 페이지에 공통적으로 들어가는 소스 -->
+<div class="container_box">
+	<!--모바일 탭메뉴버튼-->
+	<div class="button-menu-box">
+		<div class="button-menu" id="menu-toggle">
+			<span class="top"></span>
+			<span class="middle"></span>
+			<span class="bottom"></span>
+		</div>
+	</div>
+	<!--모바일 탭메뉴버튼 내용-->
+	<div class="overlay" id="overlay">
+	  <nav class="overlay-menu">
+		<ul>
+			<li class="active"><a th:href="@{/}">인적사항</a></li>
+			<li><a th:href="@{/portfolio}">포트폴리오</a></li>
+		</ul>
+	  </nav>
+	</div>
+	<!--사이드 메뉴-->
+	<div class="menu">
+		<div class="menu-content">
+			<!--맨 위 / 사진 & 간단한 인사말-->
+			<div class="my-top">
+				<div class="my-photo">
+					<img src="images/my_photo.png">
+				</div>
+				<div class="my-text">
+					<p><span class="text-mark">&#147</span><br>안녕하세요<br>신입개발자<br><span class="text-point">이유림</span><br>입니다.<br><span class="text-mark">&#148</span></p>
+				</div>
+			</div>
+			<!--중간 / 다루는 언어-->
+			<div class="my-middle">
+				<p>Web Developer <br> java / spring <br> javascript / html / css</p>
+			</div>
+			<!--마지막 / 개인정보-->
+			<div class="my-footer">
+				<p class="moblie-text"><i class="material-icons">whatshot</i> 이유림 </p>
+				<p class="moblie-text"><i class="material-icons">done</i> Web Developer </p>
+				<p class="moblie-text"><i class="material-icons">done</i> java / spring / javascript</p>
+				<a href="#"><p><i class="material-icons">device_hub</i> github.com/yuuthod</p></a>
+				<p><i class="material-icons">phone</i> 01038649478</p>
+				<p><i class="material-icons">alternate_email</i> yuuthod@gmail.com</p>
+			</div>
+		</div>
+	</div>
+	<!--탭 메뉴-->
+	<div class="tab-menu">
+		<ul>
+			<li id="tab-index-btn"><a th:href="@{/}">인적사항</a></li>
+			<li id="tab-portfolio-btn"><a th:href="@{/portfolio}">포트폴리오</a></li>
+		</ul>
+	</div>
+	<div class="main-box">
+		<div class="main-grid">
+			<!-----------------  
+			!!!!!!content!!!!!! 
+			------------------>
+			<th:block layout:fragment="content"></th:block>
+		</div>
+	</div>
+</div>
+
+<!-- 모바일 메뉴 버튼효과 -->
+<script>
+	$('.button-menu-box #menu-toggle').click(function() {
+		$(this).toggleClass('active');
+		$('#overlay').toggleClass('open');
+	});
+</script>
+
+</html>

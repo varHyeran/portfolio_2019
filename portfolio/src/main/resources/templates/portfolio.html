@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	data-layout-decorate="~{layout/defaultLayout}">
+	
+	<th:block layout:fragment="css">
+		<!-- 슬라이드 -->
+		<link rel="stylesheet" type="text/css" href="/webjars/owl.carousel/2.2.1/dist/assets/owl.carousel.css">
+	    <link rel="stylesheet" type="text/css" href="/webjars/owl.carousel/2.2.1/dist/assets/owl.theme.default.css">
+	    <link rel="stylesheet" type="text/css" href="/webjars/owl.carousel/2.2.1/docs/assets/css/animate.css">
+	</th:block>
+	<th:block layout:fragment="script">
+		<!--슬라이드-->
+		<script src="/webjars/owl.carousel/2.2.1/dist/owl.carousel.js"></script>
+		<script src="js/testimonials.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				/* tab menu */
+				$("#tab-portfolio-btn").addClass("active");
+		    });
+		</script>
+	</th:block>
+	
+<th:block layout:fragment="content">
+	<!--프로젝트 이름-->
+	<div class="box-6">
+		<div class="self-introduction">
+			<h2 class="box-title">프로젝트 자료</h2>
+			<p class="text-content">
+				<a class="download-but-box" th:href="@{https://github.com/devwondev/gift}" target="_blank">GITHUB <i class="material-icons">arrow_right_alt</i></a>
+				<a class="download-but-box" th:href="@{/download/file/선물거래시스템.pptx}">PPT <i class="material-icons">get_app</i></a>
+				<a class="download-but-box" th:href="@{/download/file/한글테스트.pdf}">완료보고서 <i class="material-icons">get_app</i></a>
+			</p>
+		</div>
+	</div>
+	<!--프로젝트 목적-->
+	<div class="box-9">
+		<h2 class="box-title">프로젝트 목적</h2>
+		<p class="text-content">
+			우리나라 농업의 가장 큰 문제점인 불안정한 농산물 가격과
+			수급불안의 위험을 줄여주고,  농업 경제활동의 불확실성을
+			해소시켜주는 농산물 선물거래 시스템
+		</p>
+	</div>
+	<!--프로젝트의 제목 및 기간-->
+	<div class="box-7">
+		<h2 class="box-title">프로젝트 제목</h2>
+		<p class="text-content">
+			선물거래를 시스템을 활용한 농산물거래 웹사이트
+			<span class="project-date">2018.12.10 ~</span>
+		</p>
+	</div>
+	<!--프로젝트 구성 -->
+	<div class="box-10">
+		<h2 class="box-title">프로젝트 구성</h2>
+		<p class="text-content">
+			Maven Spring Framework 구성
+			구매자,판매자(웹), 관리자 페이지로 구성
+		</p>
+	</div>
+	<!--프로젝트 이미지 -->
+	<div class="box-8">
+		<h2 class="box-title">프로젝트 이미지</h2>
+		<div class="project-img">
+			<div class="owl-carousel test_slider">
+				<!-- Slide -->
+				<div class="owl-item">
+					<img src="images/slide-img-1.jpg">
+				</div>
+				<!-- Slide -->
+				<div class="owl-item">
+					<img src="images/slide-img-1.jpg">
+				</div>
+				<!-- Slide -->
+				<div class="owl-item">
+					<img src="images/slide-img-1.jpg">
+				</div>
+				<!-- Slide -->
+				<div class="owl-item">
+					<img src="images/slide-img-1.jpg">
+				</div>
+				<!-- Slide -->
+				<div class="owl-item">
+					<img src="images/slide-img-1.jpg">
+				</div>
+			</div>
+			<div class="test_slider_btn">
+				<a class="prev"><span>PREV</span></a>
+				<a class="next"><span>NEXT</span></a>
+			</div>
+			<a th:href="@{http://teamgift.cafe24.com/}" class="btn">프로젝트 바로가기</a>
+		</div>
+	
+	</div>
+	<!--프로젝트 수행업무-->
+	<div class="box-11">
+		<h2 class="box-title">프로젝트 수행업무</h2>
+		<p class="text-content">
+			Higtchart library를 이용한 db데이터를 사용한 그래프작업 <br>
+			판매자,구매자 마이페이지 작업 <br>
+			Spring @Schedule를 이용한 db데이터 입력 <br>
+			전체 db구성 <br>
+			사이트 전반의 디자인 & HTML/CSS 작업 <br>
+		</p>
+	</div>
+	<!--프로젝트 페이징 인척-->
+	<div class="box-12">
+		<div class="paging">
+			<ul>
+				<li><a href="/portfolio" class="active">1</a></li>
+				<li><a href="/portfolio2">2</a></li>
+				<li><a href="/portfolio3">3</a></li>
+			</ul>
+		</div>
+	</div>
+</th:block>
+
+</html>

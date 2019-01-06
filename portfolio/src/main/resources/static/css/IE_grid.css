@@ -1,0 +1,338 @@
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	
+	.container_box {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		overflow-x: hidden;
+	}
+	
+	/* 메뉴 */
+	.menu{
+		display: flex;
+    	flex-direction: column;
+    	flex: none;
+		width: 400px;
+		min-width: 360px;
+		min-height: 1000px;
+	}
+	
+	.tab-menu {
+        position: absolute;
+		-ms-flex: 1;
+		width: 100%;
+	}
+	
+	.text-mark {
+		margin-top: 60px;
+		margin-bottom: -40px;
+	}
+	
+	/********************
+	  	   main grid
+	*********************/
+
+	/*사이드 메뉴와 tab메뉴를 제외한 content가 들어있는 box*/
+	.main-box {
+		-ms-flex: 1;
+	}
+	.main-grid {
+		width: 100%;
+		display: flex;
+		display: -ms-flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+	}
+	
+	/* 인적사항 페이지 */
+
+	/**********************
+	******가로순서대로*******
+	***********************
+	******* 1     2 *******
+	******* 3  4  5 *******
+	***********************
+	***********************/
+
+	.box-1 {
+		flex-grow: 1;
+		flex-basis: 45%;
+	}
+	.box-2 {
+		flex-grow: 1;
+		flex-basis: 40%;
+	}
+	.box-3 {
+		flex-grow: 1;
+		flex-basis: 26%;
+	}
+	.box-4 {
+		flex-grow: 1;
+		flex-basis: 26%;
+	}
+	.box-5 {
+		flex-grow: 1;
+		flex-basis: 26%;
+	}
+	.box-1, .box-2 {
+		margin-top: 95px;
+	}
+	.box-3, .box-4, .box-5 {
+		margin-top: 90px;
+	}
+	.box-1, .box-3 {
+		margin-left: 50px;
+	}
+	.box-2, .box-4 {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+	.box-5 {
+		margin-right: 30px;
+	}
+	/*포트폴리오*/
+	.box-6 {
+		flex-grow: 1;
+		flex-basis: 30%;
+	}
+	.box-7 {
+		flex-grow: 1;
+		flex-basis: 30%;
+	}
+	.box-8 {
+		flex-grow: 1;
+		flex-basis: 30%;
+	}
+	.box-9 {
+		flex-grow: 1;
+		flex-basis: 45%;
+	}
+	.box-10 {
+		flex-grow: 1;
+		flex-basis: 45%;
+	}
+	.box-11 {
+		flex-grow: 1;
+		flex-basis: 45%;
+	}
+	/*프로젝트 페이징 인척*/
+	.box-12 {
+		flex-grow: 1;
+		flex-basis: 100%;
+	}
+
+	.box-6, .box-7, .box-8 {
+		margin-left: 50px;
+		margin-right: 10px;
+	}
+	.box-9, .box-10, .box-11 {
+		margin-left: 20px;
+		margin-right: 50px;
+	}
+	.box-6,.box-9 {
+		margin-top: 90px;
+	}
+	.box-8, .box-11 {
+		margin-bottom: 30px;
+	}
+	
+	/*포트폴리오 이미지 슬라이드*/
+	/*이미지슬라이드*/
+	.project-img {
+		width: 200px;
+	}
+	.test_slider {
+		height: 100%;
+		background-color: #ddd;
+	}
+	
+	/* 스킬바  */
+	.zt-skill-bar-box {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	.zt-skill-bar-box h4 {
+		font-size: 10pt;
+		padding: 0px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		color: #981d37;
+	}
+	.zt-skill-bar-box h4.low {
+		color: #999;
+		font-weight: 300;
+	}
+	
+	.zt-skill-bar {
+        color: #fff;
+        font-size: 11px;
+        line-height: 5px;
+        height: 5px;
+        margin-bottom: 15px;
+		width: 100%;
+        background-color: rgba(0,0,0,0.05);
+
+        -webkit-border-radius: 2px;
+           -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+                border-radius: 2px;
+    }
+
+    .zt-skill-bar * {
+        webkit-transition: all 0.5s ease;
+          -moz-transition: all 0.5s ease;
+           -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+               transition: all 0.5s ease;
+    }
+
+    .zt-skill-bar div {
+        background-color: #981d37;
+        position: relative;
+        padding-left: 5px;
+        width: 0;
+
+        -webkit-border-radius: 2px;
+           -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+                border-radius: 2px;
+    }
+    
+    .zt-skill-bar.low div {
+    	background-color: #bbb;
+    } 
+    
+    .zt-skill-bar div span {
+    	position: absolute;
+    	right: -30px;
+        height: 100%;
+        padding: 0 5px 0 10px;
+        color: #981d37;
+        -ms-border-radius: 0 2px 2px 0;
+    }
+    
+    .zt-skill-bar.low div span {
+    	color: #999;
+    }
+    
+    .my-footer {
+    	width: 50%;
+    }
+	
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 1224px) {
+	.main-box {
+		-ms-flex: 1;
+		margin-top: 50px;
+	}
+	.main-grid {
+		width: 100%;
+		display: block;
+		display: -ms-flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+	}
+	.overlay {
+		width: 100%;
+	}
+	.overlay ul li {
+		opacity: 0;
+	}
+	.box-1, .box-2,.box-3, .box-4, .box-5
+	, .box-6, .box-7, .box-8, .box-9, .box-10, .box-11 {
+		margin: 0px;
+		margin-left: 30px;
+		margin-right: 30px;
+		margin-bottom: 20px;
+		padding: 0px;
+	}
+	.box-1, .box-6 {
+		margin-top: 40px;
+	}
+	.box-12 {
+		margin-bottom: 20px
+	}
+}
+
+/********************
+		모바일
+*********************/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 950px) {
+	.container_box {
+		display: block;
+		width: 100%;
+	}
+	/*상단 탭 메뉴*/
+	.tab-menu {
+		display: none;
+	}
+	.button-menu-box {
+		width: 100%;
+		height: 70px;
+		background-color: #981d37;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 100;
+	}
+	.button-menu {
+		position: absolute;
+		display: block;
+		margin-top: 6px;
+		right: 25px;
+	}
+	.overlay {
+		width: 100%;
+	}
+	/* 메뉴 */
+	.menu{
+		width: 100%;
+		position: relative;
+		height: 340px;
+		min-height: 340px;
+		background-color: #dc1d37;
+		text-align: center;
+	}
+	.menu-content {
+		width: 100%;
+		height: 260px;
+		display: inline-block;
+		position: relative;
+		margin-top: 80px;
+	}
+	.my-footer {
+		width: auto;
+		display: inline-block;
+		margin-top: 28px;
+		text-align: center;
+	}
+	.my-footer p.moblie-text {
+		display: block;
+	}
+	.my-footer p {
+		font-size: 11pt;
+		font-weight: 400;
+		padding-top: 0;
+		padding-bottom: 20px;
+		color: #fff;
+	}
+	.my-footer p i {
+		font-size: 5pt;
+	}
+	.my-top {
+		display: none;
+	}
+	.my-text p {
+		display: none;
+	}
+	.my-middle {
+		display: none;
+	}
+	.box-2, .box-3, .box-4, .box-5 {
+		margin-top: 40px;
+	}
+}
